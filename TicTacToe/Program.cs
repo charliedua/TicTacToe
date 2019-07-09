@@ -9,7 +9,7 @@ public class Program
         Console.WriteLine("Welcome To Tic Tac Toe Game!");
         Console.Write("Press Enter to start the game");
         Console.ReadLine();
-        game.start();
+        game.Start();
         Console.ReadLine();
     }
 }

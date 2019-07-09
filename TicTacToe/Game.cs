@@ -13,7 +13,7 @@ public class Game
         }
     }
 
-    public void start()
+    public void Start()
     {
         int moveCount = 0;
         int WhoseTurn = 1;
@@ -41,6 +41,7 @@ public class Game
                 //}
                 input = ComputerMove(WhoseTurn);
             }
+
             // Computer Move
             else
             {
@@ -71,7 +72,7 @@ public class Game
 
         DrawBoard();
 
-        Console.WriteLine("\n" + (win ? (XorYFromInt(whoWon) + " Won") : "DRAW"));
+        Console.WriteLine("\n" + "Game Output: " + (win ? (XorYFromInt(whoWon) + " Won") : "DRAW"));
     }
 
     private int CheckWinCondition(int[] board)
@@ -86,21 +87,13 @@ public class Game
             i += 3;
         }
 
-        // Vertical Checking
-
-        if (board[0] != -1 && board[0] == board[3] && board[3] == board[6])
+        for (int i = 0; i < 3; i++)
         {
-            return board[0];
-        }
-
-        if (board[1] != -1 && board[1] == board[4] && board[4] == board[7])
-        {
-            return board[1];
-        }
-
-        if (board[2] != -1 && board[2] == board[5] && board[5] == board[8])
-        {
-            return board[2];
+            // Vertical checking
+            if (board[i] != -1 && board[i] == board[i + 3] && board[i + 3] == board[i + 6])
+            {
+                return board[i];
+            }
         }
 
         // Diagonal Checking
