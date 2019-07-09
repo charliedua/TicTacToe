@@ -76,5 +76,7 @@ Put a number here to put an O there: Thanks for playing!
 
 DRAW
 ```
+# Signed Commits
+* Everone who is contributing should sign their commits with GPG keys.
 
 
